@@ -1,9 +1,20 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-contact',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './contact.html',
-  styleUrl: './contact.css',
 })
-export class Contact {}
+export class ContactComponent {
+  showResume = false;
+
+  openResume() {
+    this.showResume = true;
+  }
+
+  closeResume() {
+    this.showResume = false;
+  }
+}
